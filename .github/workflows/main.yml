@@ -28,4 +28,4 @@ jobs:
           title: Your desired title
           body: Auto-created Pull Request
           branch: ${{ github.ref }} # The branch where you commit
-          base: main # Don't forget to specify the right base branch here
+          base: master # Don't forget to specify the right base branch here

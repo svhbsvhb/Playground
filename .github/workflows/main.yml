@@ -28,4 +28,3 @@ jobs:
         with:  
           branch: ${{ github.ref }} # The branch where you commit
           base: master # Don't forget to specify the right base branch here
-          draft: true

@@ -8,6 +8,7 @@ categories:
     label: 'type: breaking'
   - title: 'New'
     label: 'type: feature'
+    label: 'type: feat'
   - title: 'Bug Fixes'
     label: 'type: bug'
   - title: 'Maintenance'

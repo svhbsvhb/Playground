@@ -30,13 +30,13 @@ version-resolver:
 autolabeler:
   - label: 'chore'
     title:
-      - 'chore:\s.*'
+      - '/chore/i'
   - label: 'bug'
     title:
-      - 'fix:\s.*'
+      - '/fix/i'
   - label: 'enhancement'
     title:
-      - 'feat:\s.*'
+      - '/feat/i'
 template: |
   # What's Changed
   $CHANGES

@@ -32,6 +32,14 @@ version-resolver:
       - 'type: docs'
       - 'type: dependencies'
       - 'type: security'
-
-exclude-labels:
-  - 'skip-changelog'
+ 
+autolabeler:
+  - label: 'chore'
+     title:
+      - 'chore: *'
+  - label: 'bug'
+    title:
+      - 'fix: *'
+  - label: 'enhancement'
+     title:
+      - 'feat: *'

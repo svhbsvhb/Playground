@@ -22,21 +22,21 @@ version-resolver:
       - 'type: feature'
   patch:
     labels:
-      - 'type: bug'
-      - 'type: maintenance'
-      - 'type: docs'
-      - 'type: dependencies'
-      - 'type: security'
+      - 'bug'
+      - 'maintenance'
+      - 'docs'
+      - 'dependencies'
+      - 'security'
 autolabeler:
   - label: 'chore'
     title:
-      - '/chore/i'
+      - '/chore[:]/i'
   - label: 'bug'
     title:
-      - '/fix/i'
+      - '/fix[:]/i'
   - label: 'enhancement'
     title:
-      - '/feat/i'
+      - '/feat[:]/i'
 template: |
   # What's Changed
   $CHANGES

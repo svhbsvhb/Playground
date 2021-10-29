@@ -35,11 +35,11 @@ version-resolver:
  
 autolabeler:
   - label: 'chore'
-     title:
+    title:
       - 'chore: *'
   - label: 'bug'
     title:
       - 'fix: *'
   - label: 'enhancement'
-     title:
+    title:
       - 'feat: *'

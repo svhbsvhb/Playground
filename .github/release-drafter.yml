@@ -2,17 +2,17 @@ name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: 'Breaking'
-    label: 'type: breaking'
+    label: 'breaking'
   - title: 'New'
-    label: 'type: feature'
+    label: 'enhancement'
   - title: 'Bug Fixes'
-    label: 'type: bug'
+    label: 'bug'
   - title: 'Maintenance'
-    label: 'type: maintenance'
+    label: 'maintenance'
   - title: 'Documentation'
-    label: 'type: docs'
+    label: 'docs'
   - title: 'Dependency Updates'
-    label: 'type: dependencies'
+    label: 'dependencies'
 version-resolver:
   major:
     labels:

@@ -1,8 +1,5 @@
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
-template: |
-  # What's Changed
-  $CHANGES
 categories:
   - title: 'Breaking'
     label: 'type: breaking'
@@ -17,7 +14,6 @@ categories:
     label: 'type: docs'
   - title: 'Dependency Updates'
     label: 'type: dependencies'
-
 version-resolver:
   major:
     labels:
@@ -32,7 +28,6 @@ version-resolver:
       - 'type: docs'
       - 'type: dependencies'
       - 'type: security'
- 
 autolabeler:
   - label: 'chore'
     title:
@@ -43,3 +38,7 @@ autolabeler:
   - label: 'enhancement'
     title:
       - 'feat: *'
+template: |
+  # What's Changed
+  $CHANGES
+

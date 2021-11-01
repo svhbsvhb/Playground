@@ -21,6 +21,8 @@ autolabeler:
   - label: 'enhancement'
     title:
       - '/feat[:]/i'
+exclude-labels:
+  - 'automated-pr'
 template: |
   # What's Changed
   $CHANGES

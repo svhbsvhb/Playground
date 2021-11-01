@@ -10,10 +10,48 @@ jobs:
   publish_release_draft:
     runs-on: ubuntu-latest
     steps:
-
-      # Drafts your next Release notes as Pull Requests are merged into "master"
-      - uses: release-drafter/release-drafter@v5
+    
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
+          fetch-depth: 0
+          
+      - name: Get Previous tag
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@v1"
+        
+      - name: Make Tag
+        uses: actions/github-script@v5
+        env: 
+          TAG: ${{ steps.previoustag.outputs.tag }}
+        id: tag-script
+        with:
+          result-encoding: string
+          script: |
+            const { TAG } = process.env
+            let today = new Date()
+            var re = new RegExp('-', 'g')
+            var tpo = today.toISOString().split('T')[0].replace(re,"")
+            var fullTag = TAG.split('.')
+            if (fullTag[0] == tpo)
+            {
+              var inter = parseInt(fullTag[1]) + 1
+              console.log(fullTag[0]+"."+inter)
+              return fullTag[0]+"."+inter
+            }
+            else
+            {
+              console.log(tpo+".0")
+              return tpo+".0"
+            }
+          
+      # Drafts your next Release notes as Pull Requests are merged into "master"
+      - name: Draft Release 
+        uses: release-drafter/release-drafter@v5
+        with:
+          tag: "${{ steps.tag-script.outputs.results }}"
+          name: "${{ steps.tag-script.outputs.results }}"
           publish: true
+          disable-releaser: github.ref != 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

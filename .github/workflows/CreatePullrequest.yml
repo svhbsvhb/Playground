@@ -25,6 +25,8 @@ jobs:
         
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3.10.1
-        with:  
+        with:
+          draft: true
+          title: "Next Release"
           branch: ${{ github.ref }} # The branch where you commit
           base: master # Don't forget to specify the right base branch here 

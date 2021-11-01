@@ -1,5 +1,3 @@
-name-template: 'v$RESOLVED_VERSION'
-tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: 'Breaking'
     label: 'breaking'
@@ -13,20 +11,6 @@ categories:
     label: 'docs'
   - title: 'Dependency Updates'
     label: 'dependencies'
-version-resolver:
-  major:
-    labels:
-      - 'type: breaking'
-  minor:
-    labels:
-      - 'type: feature'
-  patch:
-    labels:
-      - 'bug'
-      - 'maintenance'
-      - 'docs'
-      - 'dependencies'
-      - 'security'
 autolabeler:
   - label: 'chore'
     title:

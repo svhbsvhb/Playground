@@ -3,7 +3,7 @@ name: Release Publisher
 on:
   push:
     # branches to consider in the event; optional, defaults to all
-    branches:
+    branches: 
       - master
 
 jobs:

@@ -33,6 +33,7 @@ jobs:
           result-encoding: string
           script: |
             const { TAG } = process.env
+            console.log(`${TAG}`)
             let today = new Date()
             var re = new RegExp('-', 'g')
             var tpo = today.toISOString().split('T')[0].replace(re,"")

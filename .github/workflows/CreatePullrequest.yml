@@ -23,14 +23,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: Make Title
-        id: Title
-        run: echo "::set-output name=title::$( date +%Y%m%d )"
-        
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3.10.1
         with:
           draft: true
-          title: "Pullrequest for ${{ steps.Title.outputs.title }}"
+          title: "Next Release"
           branch: ${{ github.ref }} # The branch where you commit
           base: master # Don't forget to specify the right base branch here 

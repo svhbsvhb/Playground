@@ -33,7 +33,6 @@ jobs:
           result-encoding: string
           script: |
             const { TAG } = process.env
-            console.log(`${TAG}`)
             let today = new Date()
             var re = new RegExp('-', 'g')
             var tpo = today.toISOString().split('T')[0].replace(re,"")
@@ -41,10 +40,12 @@ jobs:
             if (fullTag[0] == tpo)
             {
               var inter = parseInt(fullTag[1]) + 1
+              console.log(fullTag[0]+"."+inter)
               return fullTag[0]+"."+inter
             }
             else
             {
+              console.log(tpo+".0")
               return tpo+".0"
             }
           

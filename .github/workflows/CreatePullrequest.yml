@@ -25,11 +25,12 @@ jobs:
         
       - name: Make Title
         id: Title
-        run: echo "::set-output name=date::$( date +%Y%m%d )"
+        run: echo "::set-output name=title::$( date +%Y%m%d )"
         
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3.10.1
-        with:  
-          title: ${{ steps.Title.outputs.date }}
+        with:
+          draft: true
+          title: "Pullrequest for ${{ steps.Title.outputs.title }}"
           branch: ${{ github.ref }} # The branch where you commit
           base: master # Don't forget to specify the right base branch here 

@@ -54,8 +54,8 @@ jobs:
       - name: Draft Release 
         uses: release-drafter/release-drafter@v5
         with:
-          tag: "${{ steps.tag-script.outputs.results }}"
-          name: "${{ steps.tag-script.outputs.results }}"
+          tag: "${{ steps.tag-script.outputs.result }}"
+          name: "${{ steps.tag-script.outputs.result }}"
           disable-releaser: github.ref != 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -11,6 +11,8 @@ categories:
     label: 'docs'
   - title: 'Dependency Updates'
     label: 'dependencies'
+  - title: 'Minor changes'
+    label: 'chore'
 autolabeler:
   - label: 'chore'
     title:

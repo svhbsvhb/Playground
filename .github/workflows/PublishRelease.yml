@@ -55,6 +55,5 @@ jobs:
           tag: "${{ steps.tag-script.outputs.result }}"
           name: "${{ steps.tag-script.outputs.result }}"
           publish: true
-          disable-releaser: github.ref != 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

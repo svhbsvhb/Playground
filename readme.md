@@ -9,4 +9,4 @@ Mig
 TOMG
 ZOMG
 
-TIMAS
+TIMAS TOK

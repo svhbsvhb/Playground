@@ -1,10 +1,14 @@
 name: Release Publisher
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Merge On Approve"]
+    types:
+      - completed
+  #push:
     # branches to consider in the event; optional, defaults to all
-    branches: 
-      - master
+    #branches: 
+    #  - master
 
 jobs:
   publish_release_draft:

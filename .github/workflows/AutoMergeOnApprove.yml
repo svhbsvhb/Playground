@@ -1,10 +1,12 @@
+name: Merge On Approve
+
 on:
   pull_request_review:
     types: [submitted]
 
 jobs:
   approved:
-    if: github.event.review.state == 'approved'
+    if: github.event.review.state == 'approved' && github.event.pull_request.base.ref == 'master'
     runs-on: ubuntu-latest
     steps:
       - name: Merge

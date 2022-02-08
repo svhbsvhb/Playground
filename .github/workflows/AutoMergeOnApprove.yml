@@ -4,7 +4,7 @@ on:
 
 jobs:
   approved:
-    if: github.event.review.state == 'approved' && github.base_ref == 'master'
+    if: github.event.review.state == 'approved'
     runs-on: ubuntu-latest
     steps:
       - name: Merge

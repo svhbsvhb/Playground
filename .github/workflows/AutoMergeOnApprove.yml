@@ -4,7 +4,7 @@ on:
   pull_request_review:
     types: [submitted]
   push: 
-    branches: tesat
+    branches: drgf
 
 jobs:
   approved:

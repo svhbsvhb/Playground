@@ -3,6 +3,8 @@ name: Merge On Approve
 on:
   pull_request_review:
     types: [submitted]
+  push: 
+    branches: tesat
 
 jobs:
   approved:

@@ -1,0 +1,18 @@
+name: TESTING
+
+on:
+  workflow_run:
+    workflows: ["Release Publisher"]
+    types:
+      - completed
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+    
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
